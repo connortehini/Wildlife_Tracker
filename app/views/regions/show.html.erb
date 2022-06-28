@@ -6,7 +6,7 @@ These animals were found in <%= @region.title %>
   <% @sightings.each do |sighting| %>
     <li>
       <%= link_to sighting.animal.name,  sighting_path(sighting)  %>
-      <%= time_ago_in_words(sighting.animal.created_at) %>
+      <%= "#{time_ago_in_words(sighting.animal.created_at)} ago" %>
     </li>
   <% end %>
 </ul>
