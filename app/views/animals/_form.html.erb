@@ -1,0 +1,15 @@
+<%= form_with model: animal do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name, :required => true  %>
+  </div>
+
+  <div>
+    <%= form.submit%>
+  </div>
+<% end %>
+
+<ul>
+  <li><%= link_to "Return", root_path(@animals) %></li>
+</ul>
+

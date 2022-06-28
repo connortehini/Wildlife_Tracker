@@ -1,0 +1,25 @@
+<h1 style= "text-align:center;">Wildlife Tracker</h1>
+
+  <h2>Animals<h2>
+
+<ul>
+  <% @animals.each do |animal|%>
+    <li>
+      <%= link_to animal.name, animal%>
+    </li>
+  <% end %>
+</ul>
+
+
+
+<p>
+  <ul>
+    <li><%= link_to "Add New Animal", new_animal_path %></li>
+    <li><%= link_to "See All Animals" %>
+    <li><%= link_to "Add New Region", new_region_path %></li>
+    <li><%= link_to "See All Regions", regions_path %></li>
+    <li><%= link_to "Add New Sightings", new_sighting_path %></li>
+    <li><%= link_to "See All Sightings", sightings_path%></li>
+  </ul>
+</p>
+

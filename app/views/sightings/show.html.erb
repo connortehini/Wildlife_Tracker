@@ -1,0 +1,21 @@
+<h1><u>Sighting</u></h1>
+
+<br>
+  <h2 style="color:Tomato;">Animal</h2>
+    <h3><%= @sighting.animal.name %>
+  <h2 style="color:Tomato;">Region</h2>
+    <h3><%= @sighting.region.title %>
+  <h2 style="color:Tomato;">Latitude</h2>
+    <h3><%= @sighting.latitude %>
+  <h2 style= "color:Tomato;">Longitude</h2>
+    <h3><%= @sighting.longitude %>
+ <h2 style="color:Tomato;">Date found:</h2>
+    <h3><%= "#{time_ago_in_words @sighting.created_at} ago" %></h3>
+
+<ul>
+    <li><%= link_to "Edit", edit_sighting_path(@sighting) %></li>
+    <li><%= link_to "Destroy", sighting_path(@sighting), method: :delete, data: {confirm: "Are you sure?"} %></li>
+    <li><%= link_to "Return", root_path(@animals) %></li>
+  </ul>
+
+

@@ -1,0 +1,16 @@
+<h1><u>Animal</u></h1>
+<br>
+  <h2 style="color:Tomato;">Animal Name:</h2>
+    <h3><%= @animal.name %></h3>
+  <h2 style="color:Tomato;">Date found:</h2>
+    <h3><%= "#{time_ago_in_words @animal.created_at} ago" %></h3>
+
+
+  <ul>
+    <li><%= link_to "Edit", edit_animal_path(@animal) %></li>
+    <li><%= link_to "Destroy", animal_path(@animal), method: :delete, data: {confirm: "Are you sure?"} %></li>
+    <li><%= link_to "Return", root_path(@animals) %></li>
+  </ul>
+
+
+

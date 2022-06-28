@@ -1,0 +1,10 @@
+<%= form_with model: region do |form| %>
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title, :requred => true %>
+  </div>
+
+  <div>
+  <%= form.submit %>
+  </div>
+<% end %>

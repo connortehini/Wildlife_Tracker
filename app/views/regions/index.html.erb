@@ -1,0 +1,12 @@
+<h1>Regions<h1>
+
+<ul>
+  <% @regions.each do |region| %>
+    <li>
+      <%= link_to region.title, region %>
+    </li>
+  <% end %>
+</ul>
+
+<li><%= link_to "Return", root_path(@animals) %></li>
+

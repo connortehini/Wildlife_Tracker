@@ -1,0 +1,25 @@
+<%= form_with model: sighting do |form|%>
+  <div>
+    <%= form.label :latitude %><br>
+    <%= form.text_field :latitude, :required => true %>
+  </div>
+
+  <div>
+    <%= form.label :longitude %><br>
+    <%= form.text_field :longitude, :required => true %>
+  </div>
+
+  <div>
+   <%= form.label :animal_id %><br>
+   <%= form.select :animal_id, Animal.pluck(:name, :id) %>
+  </div>
+
+  <div>
+    <%= form.label :region_id %><br>
+    <%= form.select :region_id, Region.pluck(:title, :id)%>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
